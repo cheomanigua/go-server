@@ -15,7 +15,7 @@ func main() {
 	// http.ListenAndServe(":8080", nil)
 
 	// METODO 3 (más sencillo)
-	http.ListenAndServe(":8080", http.FileServer(http.Dir("./static")))
+	http.ListenAndServeTLS(":8080", "cert.pem", "key.perm", http.FileServer(http.Dir("./static")))
 
 	// log.Print("Listening on :8080...")
 	// err := http.ListenAndServe(":8080", nil)
